@@ -1,0 +1,19 @@
+{
+  "name": "planrea",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w web",
+    "dev": "npm run dev -w web",
+    "lint": "npm run lint -w web",
+    "type-check": "npm exec tsc -- -p apps/web/tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  },
+  "packageManager": "npm@10.0.0"
+}
